@@ -1,0 +1,100 @@
+findById:
+sql:
+SELECT * FROM `flower` WHERE `flowerid` = :value
+parameters:
+Array
+(
+    [:value] => 1
+)
+
+insert:
+sql:
+INSERT INTO `flower` (`fname`,`fvariety`,`fcontainer`,`title`,`blurb`) VALUES (:fname,:fvariety,:fcontainer,:title,:blurb)
+fields:
+Array
+(
+    [fname] => 11
+    [fvariety] => 11
+    [fcontainer] => 11
+    [title] => 11
+    [blurb] => 11
+)
+
+**findById**:
+value:
+22
+sql:
+SELECT * FROM `price` WHERE `container` = :value
+parameters:
+Array
+(
+    [:value] => 22
+)
+
+** insert **
+sql:
+INSERT INTO `price` (`container`,`retail`,`wholesale`) VALUES (:container,:retail,:wholesale)
+fields:
+Array
+(
+    [container] => 22
+    [retail] => 22
+    [wholesale] => 22
+)
+
+**findById**:
+value:
+12
+sql:
+SELECT * FROM `price` WHERE `container` = :value
+parameters:
+Array
+(
+    [:value] => 12
+)
+
+**findById**:
+value:
+12
+sql:
+SELECT * FROM `price` WHERE `container` = :value
+parameters:
+Array
+(
+    [:value] => 12
+)
+
+update:
+sql:
+UPDATE `price` SET`container` = :container,`retail` = :retail,`wholesale` = :wholesale WHERE `container` = :primaryKey
+fields:
+Array
+(
+    [container] => 12
+    [retail] => 5.00
+    [wholesale] => 3.00
+    [primaryKey] => 12
+)
+
+**findById**:
+value:
+hanging basket
+sql:
+SELECT * FROM `price` WHERE `container` = :value
+parameters:
+Array
+(
+    [:value] => hanging basket
+)
+
+** insert **
+sql:
+INSERT INTO `price` (`container`,`retail`,`wholesale`) VALUES (:container,:retail,:wholesale)
+fields:
+Array
+(
+    [container] => hanging basket
+    [retail] => 24.00
+    [wholesale] => 16.00
+)
+
