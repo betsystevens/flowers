@@ -1,4 +1,4 @@
-<h2><?= $title ?></h2>
+<h2><?= $heading ?></h2>
 <div class="header price">
 	<div></div>
 	<div>Container</div>
@@ -10,12 +10,13 @@
 <?php foreach ($prices as $row): ?> 
 
 		<div class="output price">
-			<a class="btn" 
-				 href="/flowers/public/price/addEdit?
-				 			container=<?=$row['container']?>">
-				 edit
-			</a>
-			
+			<div class="edit">
+				<a class="btn" 
+					 href="/flowers/public/price/addEdit?
+					 			container=<?=$row['container']?>">
+					 edit
+				</a>
+			</div>
 			<?php foreach ($row as $field): ?>
 				<div class="field">
 					<?= $field ?>

@@ -7,7 +7,6 @@ namespace App;
 
 class EntryPoint
 {
-
     private $route;
     private $method;
     private $routes;

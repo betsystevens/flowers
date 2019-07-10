@@ -11,10 +11,6 @@ class PriceController
 		$this->priceTable = $priceTable;
 	}
 
-	public function home() {
-		return ['template' => 'home.html.php', 'title' => 'Home'];
-	}
-
 	public function list() {
 		$title = "Prices";
 		$prices = $this->priceTable->getAll();
@@ -22,7 +18,11 @@ class PriceController
 		return [
 			'template' => 'price.html.php',
 			'title' => $title,
-			'variables' => ['prices' => $prices]];
+			'variables' => [
+				'prices' => $prices,
+				'heading' => 'Prices'
+			]
+		];
 	}
 
 	public function addEdit() {
@@ -41,17 +41,23 @@ class PriceController
 	  		header("location: /flowers/public/price/list");
 	  	} else {
 	  		$title = 'Add Price'; // default
+	  		$action = 'Add';
 	  		// is it add or update
 	  		if (isset($_GET['container'])) {
 	  			// update
 	  			$price = $this->priceTable->findById($_GET['container']);
 	  			$title = 'Edit Price';
+	  			$action = 'Add';
 	  		}
 		}	
 		return [
 			'template' => 'inputPrice.html.php', 
 			'title' => $title,
-			'variables' => ['price' => $price]];	
+			'variables' => [
+				'price' => $price,
+				'heading' => $action . ' Price'
+			]
+		];	
 	}
 
 	public function delete() {

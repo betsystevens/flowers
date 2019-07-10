@@ -38,10 +38,13 @@ try {
     $logger->write("I:QUERY_STRING:");
     $logger->write($_SERVER['QUERY_STRING']);
 
+    $logger->write("I:method:");
+    $logger->write($_SERVER['REQUEST_METHOD']);
+
     $entryPoint = new \App\EntryPoint(
         $route, 
         $_SERVER['REQUEST_METHOD'],
-        new \Config\StaticRoutes()
+        new \Routers\StaticRoutes()
     );
 
     $entryPoint->run();

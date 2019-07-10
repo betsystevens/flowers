@@ -1,12 +1,25 @@
 /*
 /*  usage: 	mysql -u root -p < create.sql
 /*
-/*	(prompted for password)
-/* */
+/*			prompt for password
+/*
+/* 
+ */
 
-create database flowers;
-use flowers;
+CREATE DATABASE IF NOT EXISTS flowers;
 
+USE flowers;
+
+drop table if exists user;
+create table user
+(
+	id int(6) unsigned auto_increment primary key,
+	name varchar(100) not null,
+	email varchar(100) not null,
+	password varchar(255) not null
+);
+
+drop table if exists flower;
 create table flower 
 (
  	flowerid int(6) unsigned auto_increment primary key,
@@ -17,6 +30,7 @@ create table flower
 	blurb text 
 );
 
+drop table if exists price;
 create table price
 (
 	container varchar(40) not null primary key,
@@ -24,6 +38,7 @@ create table price
 	wholesale decimal(5,2) not null
 );
 
+drop table if exists images;
 create table images
 (
 	flowerid int(6) unsigned,

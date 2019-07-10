@@ -1,4 +1,4 @@
-<h2><?= $title ?></h2>
+<h2><?= $heading ?></h2>
 <form action="/flowers/public/flower/addEdit" method="post">
 	<div class="input">
 		<input type="hidden" 
@@ -8,24 +8,28 @@
 		<input type="text" 
 					 id="name"
 					 name="flower[fname]"
-					 value="<?= $flower['fname'] ?? '' ?>" 
+					 maxlength="40"
+					 value="<?= $flower['fname'] ?? '' ?>"
 					 required >
 		<label for="variety">Flower Variety</label>
 		<input type="text" 
 					 id="variety"
 					 name="flower[fvariety]"
-					 value="<?= $flower['fvariety'] ?? '' ?>" 
+					 maxlength="40"
+					 value="<?= $flower['fvariety'] ?? '' ?>"
 					 required >
 		<label for="container">Container</label>
 		<input type="text" 
 					 id="container"
 					 name="flower[fcontainer]"
+					 maxlength="40"
 					 value="<?= $flower['fcontainer'] ?? '' ?>" 
 					 required >
 		<label for="title">Title</label>
 		<input type="text"
 					 id="title"
 					 name="flower[title]"
+					 maxlength="40"
 					 value="<?= $flower['title'] ?? '' ?>">
 		<label for="blurb">Blurb</label>
 		<textarea id="blurb"

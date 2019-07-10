@@ -8,7 +8,7 @@ namespace App;
  *
  *  Constructor Example: 
  *   
- *    $priceTable = new DatabaseTable($pdo, 'Price', 'container');
+ *    $priceTable = new DatabaseTable($pdo, 'price', 'container');
  *
  *
  *  Public Methods:

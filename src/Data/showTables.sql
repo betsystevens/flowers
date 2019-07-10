@@ -3,6 +3,9 @@
 /* 
 /* */
 
+\! echo "user table"
+describe user;
+
 \! echo "flower table"
 describe flower;
 

@@ -10,58 +10,92 @@
 
 </head>
 <body>
-	<div id="page">
-		<header>
-			<div class="banner three">
-				<img 
-					src="/flowers/images/GeraniumLavender500x375.jpg" 
-					alt="geranium">
-		
-				<img 
-					src="/flowers/images/MillionBellsBlue500x375.jpg" 
-					alt="million bells">
-
-				<img 
-					src="/flowers/images/RedPurpleFuschia500x375.jpg" 
-					alt="fuschia">
-			</div>
-		</header>
-		<nav>
+	<div class="page">
+		<nav class="top">
 			<ul>
-				<li><a href="/flowers/public/flower/home">Home</a></li>
-				<li><a class="arrow" href="#">Flowers</a>
-				  <ul>
-				  	<li>
-				  		<a href="/flowers/public/flower/list">
-				  				List Flowers
-				  		</a>
-				  	</li>
-				  	<li>
-				  		<a href="/flowers/public/flower/addEdit">
-				  			Add Flower
-				  		</a>
-				  	</li>
-				  </ul>
+				<li>
+					<a class="logo" href="/flowers/public/flower/home">
+						✽
+					</a>
+				</li>
+				<li>
+					<a href="/flowers/public/flower/list">
+						Flowers
+					</a>
 				</li>  
-				<li><a class="arrow" href="#">Prices</a>
-				  <ul>
-				  	<li>
-				  		<a href="/flowers/public/price/list">
-				  			List Prices
-				  		</a>
-				  	</li>
-				  	<li>
-				  		<a href="/flowers/public/price/addEdit">
-				  			Add Price
-				  		</a>
-				  	</li>
-				  </ul>
+				<li>
+					<a href="/flowers/public/price/list">
+						Prices
+					</a>
 				 </li> 
+				<li>
+					<a href="/flowers/public/user/list">
+						Users
+					</a>
+				 </li> 
+			</ul>
+		</nav>
+		<header>
+				<h1>
+					<span class="yellow">✽</span>
+					Happy
+					<span class="spin yellow">&#x2600</span> 
+					Planting 
+					<span class="yellow">✽</span>
+				</h1>
+		</header>
+		<nav class="side left">
+			<ul>
+				<li>Flowers <span class="arrow"> &#x25bc </span>
+					<ul>
+						<li>
+							<a href="/flowers/public/flower/list">
+								List Flowers
+							</a>		
+						</li>
+						<li>
+							<a href="/flowers/public/flower/addEdit">
+								Add Flowers
+							</a>		
+						</li>
+					</ul>		
+				</li>
+				<li>Prices <span class="arrow"> &#x25bc </span>
+					<ul>
+						<li>
+							<a href="/flowers/public/price/list">
+								List Prices
+							</a>
+						</li>
+						<li>
+							<a href="/flowers/public/price/addEdit">
+							Add Prices
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>Users <span class="arrow"> &#x25bc </span>
+					<ul>
+						<li>
+							<a href="/flowers/public/user/list">
+								List Users
+							</a>	
+						</li>
+						<li>
+							<a href="/flowers/public/user/update">
+								Add Users
+							</a>	
+						</li>
+					</ul>
+				</li>
 			</ul>
 		</nav>
 		<main>
 			<?= $output ?>
 		</main>
+		<section class="side right">
+			
+		</section>
 		<footer></footer>
 	</div>	
 </body>

@@ -1,4 +1,4 @@
-<h2><?= $title ?></h2>
+<h2><?= $heading ?></h2>
 <form action="" method="post">
 	<!-- collect data to insert into price table -->
 	<div class="input">
@@ -6,6 +6,7 @@
 		<input type="text" 
 					 id="container" 
 					 name="price[container]"
+					 maxlength="40"
 					 value="<?= $price['container'] ?? '' ?>"
 					 <?= ($price['container'] != '') ? "readonly":"" ?>
 					 required >

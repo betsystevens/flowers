@@ -22,7 +22,10 @@ class FlowerController
 		return [
 			'template' => 'flower.html.php', 
 			'title' => $title,
-			'variables' => ['flowers' => $flowers] 
+			'variables' => [
+				'flowers' => $flowers,
+				'heading' => 'Flowers'
+			] 
 		];
 	}
 	
@@ -46,18 +49,23 @@ class FlowerController
 				}
 				header("location: /flowers/public/flower/list");
 		} else {
-			$title = "Add Flower"; // default
+			$title = 'Add Flower'; // default title
+			$action = 'Add';
 			// is it add or update
 			if (isset($_GET['flowerid'])) {
 				// udpate
 				$flower = $this->flowerTable->findById($_GET['flowerid']);
-				$title = "Edit Flower";
+				$title = 'Edit Flower';
+				$action = 'Edit';
 			}
 		}	
 		return [
 			'template' => 'inputFlower.html.php',
 			'title' => $title,
-			'variables' => [ 'flower' => $flower]
+			'variables' => [ 
+				'flower' => $flower,
+				'heading' => $action . ' Flower'
+			]
 		];	
 	}
 
