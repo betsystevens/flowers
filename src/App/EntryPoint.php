@@ -11,9 +11,14 @@ class EntryPoint
     private $method;
     private $routes;
 
-    public function __construct(string $route, string $method, \App\Routes $routes)
+    public function __construct(
+        string $route,
+        string $method,
+        \App\Routes $routes
+    )
     {
-        $this->route = $route ? $route : 'flower/home';
+        // $this->route = $route ? $route : 'flower/home';
+        $this->route = $route ? $route : 'home';
         $this->method = $method;
         $this->routes = $routes;
         $this->checkUrl();
@@ -24,7 +29,7 @@ class EntryPoint
     {
         if($this->route !== strtolower($this->route)) {
             // http_response_code(301);
-            // header('locaiton: ' . strtolower($this->route));
+            // header('location: ' . strtolower($this->route));
         }
     }
 

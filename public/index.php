@@ -1,12 +1,12 @@
 <?php
 
 /**
- *  
+ *
  *  web root directory is /flowers/public
  *
  *  get $route from ['REQUEST_URI']
- *  
- *  example values for route: 
+ *
+ *  example values for route:
  *    /flower/list, /flower/addEdit, /flower/home
  *    /price/list, /price/addEdit
  *
@@ -15,13 +15,13 @@
  *  using $route, ['REQUEST_METHOD'] and static routes array
  *    start the routing and request handling with
  *    EntryPoint->run()
- *  
+ *
  */
 try {
 
     include __DIR__ . '/../includes/autoload.php';
 
-    $logger = new \App\Logger('/../../storage/logFile');
+    $logger = new \App\Logger('/../../logs/logFile');
     $logger->write("******************* From the Top ******************");
     $logger->write('I:REQUEST_URI:');
     $logger->write($_SERVER['REQUEST_URI']);
@@ -33,7 +33,10 @@ try {
     $logger->write($route);
 
     // if nothing in route set to default
-    $route = $route ? $route : 'flower/home';  // default
+    $route = $route ? $route : 'home';  // default
+
+    $logger->write("I-2:route:");
+    $logger->write($route);
 
     $logger->write("I:QUERY_STRING:");
     $logger->write($_SERVER['QUERY_STRING']);
@@ -42,7 +45,7 @@ try {
     $logger->write($_SERVER['REQUEST_METHOD']);
 
     $entryPoint = new \App\EntryPoint(
-        $route, 
+        $route,
         $_SERVER['REQUEST_METHOD'],
         new \Routers\StaticRoutes()
     );

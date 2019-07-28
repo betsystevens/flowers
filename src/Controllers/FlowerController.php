@@ -3,7 +3,7 @@ namespace Controllers;
 
 use App\DatabaseTable;
 
-class FlowerController 
+class FlowerController
 {
 	private $flowerTable;
 
@@ -20,26 +20,26 @@ class FlowerController
 		$flowers = $this->flowerTable->getAll();
 
 		return [
-			'template' => 'flower.html.php', 
+			'template' => 'flower.html.php',
 			'title' => $title,
 			'variables' => [
 				'flowers' => $flowers,
 				'heading' => 'Flowers'
-			] 
+			]
 		];
 	}
-	
+
 	public function addEdit() {
 		// has user entered input
 		if (isset($_POST['flower'])) {
 			// is it add or update
-			if ( 
-					(isset ($_POST['flower']['flowerid'])) && 
-					(($_POST['flower']['flowerid']) == '') 
+			if (
+					(isset ($_POST['flower']['flowerid'])) &&
+					(($_POST['flower']['flowerid']) == '')
 				)
 				{
-					// it's add so insert
-					$fields = $_POST['flower']; 
+					// it is add so insert
+					$fields = $_POST['flower'];
 					// unset flowerid so mysql will
 					// autoincrement a unique id on insert
 					unset($fields['flowerid']);
@@ -58,15 +58,15 @@ class FlowerController
 				$title = 'Edit Flower';
 				$action = 'Edit';
 			}
-		}	
+		}
 		return [
 			'template' => 'inputFlower.html.php',
 			'title' => $title,
-			'variables' => [ 
+			'variables' => [
 				'flower' => $flower,
 				'heading' => $action . ' Flower'
 			]
-		];	
+		];
 	}
 
 	public function delete() {

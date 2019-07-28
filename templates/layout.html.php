@@ -14,7 +14,7 @@
 		<nav class="top">
 			<ul>
 				<li>
-					<a class="logo" href="/flowers/public/flower/home">
+					<a class="logo" href="/flowers/public/home">
 						✽
 					</a>
 				</li>

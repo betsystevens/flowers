@@ -8,10 +8,10 @@
 </div>
 
 <?php foreach ($flowers as $row): ?>
-	
+
 	<div class="output flower">
 		<div class="edit">
-		<a class="btn" 
+		<a class="btn"
 			 href="/flowers/public/flower/addEdit?flowerid=<?=$row['flowerid']?>">
 			 edit
 		</a>
@@ -23,11 +23,11 @@
 		<?php endforeach; ?>
 
 		<form action="/flowers/public/flower/delete" method="post">
-			<input type="hidden" 
+			<input type="hidden"
 						 name="flowerid"
 						 value="<?= $row['flowerid'] ?>">
 			<input type="submit" value="delete" class="btn">
 		</form>
 	</div>
 	<hr></hr>
-<?php endforeach; ?>	
+<?php endforeach; ?>

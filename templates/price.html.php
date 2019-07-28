@@ -12,8 +12,8 @@
 		<div class="output price">
 			<div class="edit">
 				<a class="btn" 
-					 href="/flowers/public/price/addEdit?
-					 			container=<?=$row['container']?>">
+					 href=
+					 "/flowers/public/price/addEdit?container=<?=$row['container']?>">
 					 edit
 				</a>
 			</div>

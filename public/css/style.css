@@ -19,7 +19,7 @@ html {
 body {
   margin: 0;
   font-size: var(--baseFontSize);
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: normal;
   color: var(--blackgray);
 	display: flex;
@@ -67,7 +67,7 @@ button {
     border-radius: .5rem;
     padding: .7rem;
     margin: 0;
-    
+
     background: var(--aspengold);
     opacity: .8;
     color: var(--blackgray);
@@ -75,7 +75,7 @@ button {
     font-style: italic;
     text-align: center;
 
-    transition: background 250ms ease-in-out, 
+    transition: background 250ms ease-in-out,
                 transform 150ms ease;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -105,7 +105,7 @@ nav.top {
     grid-column: span 3;
 }
 nav.top a.logo {
-    font-size: 3rem; 
+    font-size: 3rem;
 }
 nav.top > ul {
     display: flex;
@@ -114,7 +114,7 @@ nav.top > ul {
     padding: 2rem 1rem;
     background-color: var(--blackgray);
 }
-nav.top a { 
+nav.top a {
     color: var(--medgray);
     line-height: 3rem;
 }
@@ -247,7 +247,7 @@ form {
 	display: grid;
 	grid-gap: 20px;
 	padding: .5rem;
-    border-bottom: 
+    border-bottom:
 	/*border: 1px solid lightgreen;*/
 }
 .header.price,
@@ -262,7 +262,7 @@ form {
 .output.user {
     grid-template-columns: 75px 75px 1fr 1fr 1fr 75px;
 }
-.output
+
 .output .flowerid {
 	display: none;
 }

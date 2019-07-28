@@ -1,4 +1,6 @@
 docs/
 storage/
+logs/
+notes/
 includes/DatabaseConnection.php
 

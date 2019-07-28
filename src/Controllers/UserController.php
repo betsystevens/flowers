@@ -28,7 +28,7 @@ class UserController
     }
 
     public function update() {
-        $logger = new Logger("../../storage/logFile");
+        $logger = new Logger("../../logs/logFile");
         $logger->write("UserCntrllr: update, could be add or edit");
 
         $title = 'Add User'; // default
